@@ -1,0 +1,13 @@
+pillow
+numpy
+pandas
+scikit-learn
+optuna
+tensorboard
+matplotlib
+seaborn
+tqdm
+seaborn
+medmnist
+torchmetrics
+mlxtend
