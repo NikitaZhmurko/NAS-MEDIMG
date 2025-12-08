@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 
-class cnn(nn.Module):
+class StaticCNN(nn.Module):
     def __init__(self, input_shape: int, hidden_units: int, output_shape: int):
         super().__init__()
         self.layer1 = nn.Sequential(

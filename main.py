@@ -11,7 +11,7 @@ import tqdm
 from timeit import default_timer as timer
 from tqdm.auto import tqdm
 
-from src.model import cnn  
+from static_model import StaticCNN  
 
 
 # -----------------------------
@@ -151,7 +151,7 @@ def main(args):
     # -----------------------------
     # Modell, Optimizer, Loss
     # -----------------------------
-    model = cnn(input_shape=n_channels, hidden_units=16, output_shape=n_classes).to(device)
+    model = StaticCNN(input_shape=n_channels, hidden_units=16, output_shape=n_classes).to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
     loss_fn = nn.CrossEntropyLoss()
 
@@ -218,10 +218,10 @@ def main(args):
 # -----------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, default="tissuemnist", help="Dataset: tissuemnist | pathmnist")
+    parser.add_argument("--dataset", type=str, default="pathmnist", help="Dataset: tissuemnist | pathmnist")
     parser.add_argument("--img_size", type=int, default=64)
     parser.add_argument("--batch", type=int, default=64)
-    parser.add_argument("--epochs", type=int, default=10)
+    parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--lr", type=float, default=1e-3)
     #parser.add_argument("--conv_layers", type=int, default=3)
     #parser.add_argument("--base_filters", type=int, default=32)

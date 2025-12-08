@@ -1,0 +1,20 @@
+{
+  "n_conv_layers": 9,
+  "n_linear_layers": 2,
+  "conv_ch_0": 256,
+  "conv_ch_1": 128,
+  "conv_ch_2": 256,
+  "conv_ch_3": 256,
+  "conv_ch_4": 128,
+  "conv_ch_5": 256,
+  "conv_ch_6": 16,
+  "conv_ch_7": 32,
+  "conv_ch_8": 32,
+  "linear_units_0": 128,
+  "linear_units_1": 256,
+  "kernel_size": 3,
+  "pool_every": 3,
+  "pool_type": "max",
+  "dropout": 0.20957352876156504,
+  "lr": 0.0017583076338086685
+}
